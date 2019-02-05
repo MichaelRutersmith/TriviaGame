@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Trivia Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- header with my name on it on top -->
+    <header>
+        <nav class="navbar navbar-light bg-light card-header">
+            <span class="navbar-brand mb-0 h1"> Michael Smith Trivia</span>
+        </nav>
+    </header>
+    <main>
+
+        <article class="container">
+            <div class="uk-animation-scale-up">
+                <div class="timer">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3> Time Remaining: <span id="time"></span></h3>
+                        </div>
+                    </div>
+                    <div id="transitions">
+                        <div id="questions" class="show-front">
+                            <!-- QUESTIONS FORM -->
+                            <form id="form">
+                                <!-- QUESTION 1 -->
+
+                                <div class="front">
+                                    <div class="innerQuestion">
+                                        <legend>
+                                            <h3>Q1. What is the capitol of Minnesota? </h3>
+                                        </legend>
+                                        <p id="q1">
+                                            <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Minneapolis"><i
+                                                    class="fas fa-globe fa-xs"></i> Minneapolis </label>
+                                            <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Saint Paul"><i
+                                                    class="fas fa-globe fa-xs"></i> Saint Paul </label>
+                                            <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Hamm"><i
+                                                    class="fas fa-globe fa-xs"></i> Hamm </label>
+                                            <label> <input class="uk-radio .uk-form-large" name="q1" type="radio" value="Duluth"><i
+                                                    class="fas fa-globe fa-xs"></i> Duluth </label>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <!-- QUESTION 2 -->
+
+                                <div class="back cf panel">
+                                    <div class="innerQuestion">
+                                        <h3>Q2. True/False The Twin Cities is a nickname for the cities Minneapolis and
+                                            Saint Paul</h3>
+                                        <p id="q2">
+                                            <label><input class="uk-radio" name="q2" type="radio" value="True"><i class="fas fa-dollar-sign fa-xs"></i>
+                                                True </label>
+                                            <label><input class="uk-radio" name="q2" type="radio" value="False"><i
+                                                    class="fas fa-dollar-sign fa-xs"></i> False </label>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- QUESTION 3 -->
+
+                                <div class="right cf panel">
+                                    <div class="innerQuestion">
+                                        <h3>Q3. The state bird for Minnesota is?</h3>
+                                        <p id="q3">
+                                            <label><input class="uk-radio" name="q3" type="radio" value="Cardinal"> <i
+                                                    class="fas fa-globe fa-xs"></i> Cardinal </label>
+                                            <label><input class="uk-radio" name="q3" type="radio" value="Loon"><i class="fas fa-globe fa-xs"></i>
+                                                Loon </label>
+                                            <label><input class="uk-radio" name="q3" type="radio" value="Mallard"><i
+                                                    class="fas fa-globe fa-xs"></i> Mallard </label>
+                                            <label><input class="uk-radio" name="q3" type="radio" value="Bald Eagle"><i
+                                                    class="fas fa-globe fa-xs"></i> Bald Eagle </label>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- QUESTION 4 -->
+                                <div class="left cf panel">
+                                    <div class="innerQuestion">
+                                        <h3>Q4. Minnesota is known for it's plentiful...</h3>
+                                        <p id="q4">
+                                            <label><input class="uk-radio" name="q4" type="radio" value="Lakes"><i
+                                                    class="fas fa-coffee fa-xs"></i> Lakes </label>
+                                            <label><input class="uk-radio" name="q4" type="radio" value="Rivers"><i
+                                                    class="fas fa-coffee fa-xs"></i> Rivers</label>
+                                            <label><input class="uk-radio" name="q4" type="radio" value="Mountains"><i
+                                                    class="fas fa-coffee fa-xs"></i> Mountains </label>
+                                            <label><input class="uk-radio" name="q4" type="radio" value="Hot Dishes"><i
+                                                    class="fas fa-coffee fa-xs"></i> Hot Dishes </label>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <p class="show-buttons">
+                                    <input id="submit" type="submit" class="btn btn-success" value="Submit" />
+                                </p>
+
+                            </form>
+
+
+                        </div>
+                        <div id="score"> Your Final Score is: <span id="FinalScore"> </span> </div>
+
+                    </div>
+
+                </div>
+
+        </article>
+
+
+    </main>
+    <footer>
+        <div class="card-footer ">
+            <p> <strong> Copyright © 2019 by Michael Smith </strong> </p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+</body>
+
+</html>
